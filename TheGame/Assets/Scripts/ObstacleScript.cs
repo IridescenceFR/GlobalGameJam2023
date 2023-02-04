@@ -12,12 +12,16 @@ public class ObstacleScript : MonoBehaviour
  
     private void OnTriggerEnter(Collider hit)
     {
-        isCurrentlyColliding = true;
+        if (hit.gameObject.tag == "MovingObstacle") {
+            isCurrentlyColliding = true;
+        }
     }
     
     private void OnTriggerExit(Collider hit)
     {
-        isCurrentlyColliding = false;
+        if (hit.gameObject.tag == "MovingObstacle") {
+            isCurrentlyColliding = false;
+        }
     }
 
     void Start()

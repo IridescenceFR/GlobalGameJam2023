@@ -113,9 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vSpeed: 0
   rg: {fileID: 621517555029092679}
-  xMax: 0
-  hSpeed: 2
-  zMax: 0
+  hSpeed: 4
   isGoingForward: 1
 --- !u!54 &621517555029092679
 Rigidbody:
