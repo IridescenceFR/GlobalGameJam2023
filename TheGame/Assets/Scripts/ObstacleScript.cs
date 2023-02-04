@@ -13,13 +13,11 @@ public class ObstacleScript : MonoBehaviour
     private void OnTriggerEnter(Collider hit)
     {
         isCurrentlyColliding = true;
-        Debug.Log(isCurrentlyColliding);
     }
     
     private void OnTriggerExit(Collider hit)
     {
         isCurrentlyColliding = false;
-        Debug.Log(isCurrentlyColliding);
     }
 
     void Start()
@@ -31,17 +29,16 @@ public class ObstacleScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(isCurrentlyColliding);
         if (!isCurrentlyColliding) {
-            Debug.Log("MOVING !!!!!");
+            Debug.Log("*");
             rg.velocity = Vector3.right * vSpeed;
             if (transform.position.x > xMax) {
                 Destroy(gameObject);
             }
+        } else {
+            rg.velocity = Vector3.zero;
         }
         
     }
-
-    // public void setVSpeed(float speed) {
-    //     vSpeed = speed;
-    // }
 }

@@ -30,6 +30,7 @@ public class PaletuvierScript : MonoBehaviour
             if (obstacleList.Count < inventorySize) {
                 // if click on obs on the beach, add to inventory
                 if (Physics.Raycast(ray, out hit) && hit.collider.name.Contains("StaticObstacle")) {
+                    var beach = GameObject.Find("Beach").GetComponent<BeachScript>().numberSpawned -= 1;
                     GameObject obs = hit.collider.gameObject;
                     obs.transform.position = new Vector3(obs.transform.position.x, obs.transform.position.y - 10, obs.transform.position.z);
                     obstacleList.Add(obs);

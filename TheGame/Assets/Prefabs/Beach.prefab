@@ -101,3 +101,5 @@ MonoBehaviour:
   size: {x: 0, y: 0, z: 0}
   min: {x: 0, y: 0, z: 0}
   max: {x: 0, y: 0, z: 0}
+  maxSpawned: 6
+  numberSpawned: 0

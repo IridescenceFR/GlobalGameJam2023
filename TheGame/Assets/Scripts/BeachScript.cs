@@ -11,6 +11,8 @@ public class BeachScript : MonoBehaviour
     public Vector3 size;
     public Vector3 min;
     public Vector3 max;
+    public int maxSpawned;
+    public int numberSpawned = 0;
 
     void Start()
     {
@@ -22,12 +24,15 @@ public class BeachScript : MonoBehaviour
 
     IEnumerator spawnObstacles() {
         while (true) {
-            Vector3 randomSpawnPos = new Vector3(
-                Random.Range(min.x, max.x),
-                0,
-                Random.Range(min.z, max.z)
-            );
-            Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);
+            if (numberSpawned < maxSpawned) {
+                Vector3 randomSpawnPos = new Vector3(
+                    Random.Range(min.x, max.x),
+                    0,
+                    Random.Range(min.z, max.z)
+                );
+                Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);
+                numberSpawned +=1;
+            }
             yield return new WaitForSeconds(spawnSpeed);
         }    
     }
