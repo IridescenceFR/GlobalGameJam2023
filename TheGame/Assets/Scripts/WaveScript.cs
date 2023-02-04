@@ -21,4 +21,12 @@ public class WaveScript : MonoBehaviour
             rg.velocity = new Vector3(-1 * vSpeed, 0, zAxis * hSpeed);
         }
     }
+
+    void OnCollisionEnter (Collision targetObj)
+    {
+        if (targetObj.gameObject.tag == "Obstacle") {
+            Destroy(targetObj.gameObject);
+            vSpeed -= 1;
+        }
+    }
 }
