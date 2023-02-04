@@ -14,6 +14,19 @@ public class WaveScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rg.velocity = Vector3.left * vSpeed;
+        float zAxis= Input.GetAxis("Horizontal");
+        if (transform.position.z + zAxis < outerLeft || transform.position.z + zAxis > outerRight) {
+            rg.velocity = new Vector3(-1 * vSpeed, 0, 0);
+        } else {
+            rg.velocity = new Vector3(-1 * vSpeed, 0, zAxis * hSpeed);
+        }
+    }
+
+    void OnTriggerEnter (Collider hit)
+    {
+        if (hit.gameObject.tag == "Obstacle") {
+            Destroy(hit.gameObject);
+            vSpeed -= 1;
+        }
     }
 }
