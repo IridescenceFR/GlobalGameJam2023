@@ -22,10 +22,10 @@ public class WaveScript : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter (Collision targetObj)
+    void OnTriggerEnter (Collider hit)
     {
-        if (targetObj.gameObject.tag == "Obstacle") {
-            Destroy(targetObj.gameObject);
+        if (hit.gameObject.tag == "Obstacle") {
+            Destroy(hit.gameObject);
             vSpeed -= 1;
         }
     }
