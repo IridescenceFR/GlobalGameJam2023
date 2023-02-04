@@ -7,7 +7,7 @@ public class ObstacleScript : MonoBehaviour
 {
     public float vSpeed;
     public Rigidbody rg;
-    public float xMax;
+    float xMax;
     bool isCurrentlyColliding = false;
  
     private void OnTriggerEnter(Collider hit)

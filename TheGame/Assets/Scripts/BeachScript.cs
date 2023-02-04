@@ -8,9 +8,9 @@ public class BeachScript : MonoBehaviour
 {
     public float spawnSpeed;
     public GameObject objectToSpawn;
-    public Vector3 size;
-    public Vector3 min;
-    public Vector3 max;
+    Vector3 size;
+    Vector3 min;
+    Vector3 max;
     public int maxSpawned;
     public int numberSpawned = 0;
 

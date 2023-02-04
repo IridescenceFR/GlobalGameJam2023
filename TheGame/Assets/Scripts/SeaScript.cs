@@ -6,16 +6,19 @@ using System.Linq;
 public class SeaScript : MonoBehaviour
 {
     public GameObject objectToSpawn;
-    public List<GameObject> obsList = new List<GameObject>();
+    List<GameObject> obsList = new List<GameObject>();
+    public int spawnAmountStart = 3;
+    public int spawnAmountMiddle = 5;
+    public int spawnAmountEnd = 8;
     Vector3 size;
 
 
     void Start()
     {
         size = GetComponent<Renderer>().bounds.size;
-        SpawningObs(2, transform.position.x + (size.x / 3f), transform.position.x + (size.x / 2f));
-        SpawningObs(4, transform.position.x - (size.x / 6f), transform.position.x + (size.x / 6f));
-        SpawningObs(7, transform.position.x - (size.x / 3f), transform.position.x - (size.x / 2f));
+        SpawningObs(spawnAmountStart - 1, transform.position.x + (size.x / 6f), transform.position.x + (size.x / 2f));
+        SpawningObs(spawnAmountMiddle - 1, transform.position.x - (size.x / 6f), transform.position.x + (size.x / 6f));
+        SpawningObs(spawnAmountEnd - 1, transform.position.x - (size.x / 2f), transform.position.x - (size.x / 6f));
     }
 
     private void SpawningObs(int amount, float minRange, float maxRange)
@@ -53,7 +56,6 @@ public class SeaScript : MonoBehaviour
                     }
                     break;
                 } else if (distance >= 12 && obs == obsList.Last()) {
-                    Debug.Log(retry);
                     var newObs = Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);
                     newObs.GetComponent<MovingObstacleScript>().isGoingForward = isGoingForward;
                     

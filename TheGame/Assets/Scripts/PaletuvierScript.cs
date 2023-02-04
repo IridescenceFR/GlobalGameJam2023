@@ -5,12 +5,12 @@ using UnityEngine;
 public class PaletuvierScript : MonoBehaviour
 {
     public GameObject objectToSpawn;
-    public Plane ground = new Plane(Vector3.up, Vector3.zero);
+    Plane ground = new Plane(Vector3.up, Vector3.zero);
     public int outerLeft;
     public int outerRight;
-    public List<GameObject> obstacleList = new List<GameObject>();
+    List<GameObject> obstacleList = new List<GameObject>();
     public int inventorySize;
-    public bool throwCoolDownFinished = true;
+    bool throwCoolDownFinished = true;
     public float throwCoolDown;
 
     // Start is called before the first frame update
