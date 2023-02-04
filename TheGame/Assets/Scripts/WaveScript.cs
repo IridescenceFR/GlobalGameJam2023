@@ -5,24 +5,26 @@ using UnityEngine.PlayerLoop;
 
 public class WaveScript : MonoBehaviour
 {
-    public float outerLeft;
-    public float outerRight;
-    public float hSpeed;
-    public float vSpeed;
+    public int outerLeft;
+    public int outerRight;
+    public int hSpeed;
+    public int vSpeed;
+    public float vSpeedMax;
+    public int power;
 
     public Rigidbody rg;
 
     private void FixedUpdate()
     {
-        float zAxis= Input.GetAxis("Horizontal");
-        if (transform.position.z + zAxis < outerLeft || transform.position.z + zAxis > outerRight) {
-            rg.velocity = new Vector3(-1 * vSpeed, 0, 0);
+        float zAxis = Input.GetAxis("Horizontal");
+        if (transform.position.z + zAxis*0.1f < outerLeft || transform.position.z + zAxis*0.1f > outerRight) {
+            rg.velocity = Vector3.left * vSpeed;
         } else {
             rg.velocity = new Vector3(-1 * vSpeed, 0, zAxis * hSpeed);
         }
     }
 
-    void OnTriggerEnter (Collider hit)
+    private void OnTriggerEnter (Collider hit)
     {
         if (hit.gameObject.tag == "Obstacle") {
             Destroy(hit.gameObject);

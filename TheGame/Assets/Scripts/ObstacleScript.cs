@@ -6,6 +6,7 @@ using UnityEngine.PlayerLoop;
 public class ObstacleScript : MonoBehaviour
 {
     public float vSpeed;
+    public float effort;
 
     public Rigidbody rg;
 
