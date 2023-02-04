@@ -14,6 +14,11 @@ public class WaveScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rg.velocity = new Vector3(-1 * vSpeed, 0, Input.GetAxis("Horizontal") * hSpeed);
+        float zAxis= Input.GetAxis("Horizontal");
+        if (transform.position.z + zAxis < outerLeft || transform.position.z + zAxis > outerRight) {
+            rg.velocity = new Vector3(-1 * vSpeed, 0, 0);
+        } else {
+            rg.velocity = new Vector3(-1 * vSpeed, 0, zAxis * hSpeed);
+        }
     }
 }
