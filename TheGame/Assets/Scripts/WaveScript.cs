@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -7,8 +8,8 @@ public class WaveScript : MonoBehaviour
 {
     public int outerLeft;
     public int outerRight;
-    public int hSpeed;
-    public int vSpeed;
+    public float hSpeed;
+    public float vSpeed;
     public float vSpeedMax;
     public int power;
 
@@ -21,6 +22,11 @@ public class WaveScript : MonoBehaviour
             rg.velocity = Vector3.left * vSpeed;
         } else {
             rg.velocity = new Vector3(-1 * vSpeed, 0, zAxis * hSpeed);
+        }
+
+        if (vSpeed < vSpeedMax)
+        {
+            vSpeed += 0.1f;
         }
     }
 
