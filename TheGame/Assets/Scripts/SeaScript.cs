@@ -47,7 +47,7 @@ public class SeaScript : MonoBehaviour
 
             foreach(GameObject obs in obsList) {
                 // Calculate the distance between our Random Position and each obstacle from our list
-                distance = Mathf.Sqrt( Mathf.Pow( (obs.transform.position.x - randomSpawnPos.x), 2) + Mathf.Pow( (obs.transform.position.z - randomSpawnPos.z), 2));
+                distance = Mathf.Sqrt(Mathf.Pow( (obs.transform.position.x - randomSpawnPos.x), 2));
                 if (distance < 12) {
                     // Random Position is too close
                     if (retry > 0) {
