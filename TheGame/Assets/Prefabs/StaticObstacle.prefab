@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 621517555029092680}
   - component: {fileID: 621517555029092679}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: StaticObstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,8 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf0d91dbb95343158b50e13b80f38b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vSpeed: 5
-  isStatic: 0
+  vSpeed: 0
   rg: {fileID: 621517555029092679}
 --- !u!54 &621517555029092679
 Rigidbody:

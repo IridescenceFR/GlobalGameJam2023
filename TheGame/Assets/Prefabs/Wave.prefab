@@ -233,6 +233,6 @@ MonoBehaviour:
   outerRight: 4
   hSpeed: 5
   vSpeed: 5
-  vSpeedMax: 5
+  vSpeedMax: 10
   power: 5
   rg: {fileID: 839091148718974343}

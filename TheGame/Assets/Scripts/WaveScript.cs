@@ -34,7 +34,9 @@ public class WaveScript : MonoBehaviour
     {
         if (hit.gameObject.tag == "Obstacle") {
             Destroy(hit.gameObject);
-            vSpeed -= 1;
+            if (vSpeed > 0) {
+                vSpeed -= 5f;
+            }
         }
     }
 }

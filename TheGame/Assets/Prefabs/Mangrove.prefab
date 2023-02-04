@@ -142,7 +142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd9c474a4f084951a9dd6eb22535d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 2951331269915921429, guid: 2117ca8ffc67e4708a4a92efc6c7f2c3, type: 3}
+  objectToSpawn: {fileID: 621517555029092678, guid: 0fe4b591b1f40de558616c2e0cb6dc07, type: 3}
+  outerLeft: -5
+  outerRight: 5
+  obstacleList: []
+  inventorySize: 10
+  throwCoolDownFinished: 1
+  throwCoolDown: 0.5
 --- !u!1 &8043851660765141667
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,14 +174,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8043851660765141667}
-  m_LocalRotation: {x: 0.45451945, y: 0.54167527, z: -0.45451945, w: 0.54167527}
-  m_LocalPosition: {x: -3, y: 12, z: 0}
+  m_LocalRotation: {x: 0.38438514, y: 0.5935049, z: -0.38438517, w: 0.59350497}
+  m_LocalPosition: {x: -8.68, y: 13.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5804711984250329578}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 80, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 65.858, y: 90, z: 0}
 --- !u!20 &2134366564483418247
 Camera:
   m_ObjectHideFlags: 0
@@ -232,5 +238,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 5804711984250329578}
-  offset: {x: -3, y: 12, z: 0}
-  rotation: {x: 0.45451945, y: 0.5416752, z: -0.45451945, w: 0.5416752}
+  offset: {x: -8.5, y: 13.5, z: 0}
+  rotation: {x: 0.3799282, y: 0.5963678, z: -0.3799282, w: 0.5963678}
