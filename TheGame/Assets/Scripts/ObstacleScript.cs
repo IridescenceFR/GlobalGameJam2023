@@ -29,9 +29,7 @@ public class ObstacleScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(isCurrentlyColliding);
         if (!isCurrentlyColliding) {
-            Debug.Log("*");
             rg.velocity = Vector3.right * vSpeed;
             if (transform.position.x > xMax) {
                 Destroy(gameObject);
