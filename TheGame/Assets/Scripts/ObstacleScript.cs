@@ -13,9 +13,7 @@ public class ObstacleScript : MonoBehaviour
     public float outerLeft;
     public float outerRight;
     public Vector3 offset;
-
-    public GameObject sea;
-
+    
     private void FixedUpdate()
     {
         if (moving)
@@ -40,10 +38,5 @@ public class ObstacleScript : MonoBehaviour
     public void SetMovingTrue()
     {
         moving = true;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.name);
     }
 }
