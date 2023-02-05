@@ -8,17 +8,36 @@ public class ObstacleScript : MonoBehaviour
 {
     public bool moving = false;
     public float vSpeed;
+    public float vSpeedMax;
     public Rigidbody rg;
     public float xMax;
     public float outerLeft;
     public float outerRight;
     public Vector3 offset;
-    
+    public GameObject tree;
+    public GameObject sea;
+
     private void FixedUpdate()
     {
         if (moving)
         {
-            rg.velocity = Vector3.right * vSpeed;
+            var wave = GameObject.Find("Wave");
+            float distanceWave = Mathf.Sqrt(Mathf.Pow((wave.transform.position.x - transform.position.x), 2));
+            float distanceTree = Mathf.Sqrt(Mathf.Pow((tree.transform.position.x - transform.position.x), 2));
+
+            if (distanceWave > 70 && distanceTree > 15) {
+                Debug.Log(distanceWave);
+                Debug.Log("FAST");
+                (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
+                rg.velocity = Vector3.right * vSpeedMax;
+            } else {
+                Debug.Log(distanceWave);
+                Debug.Log(distanceTree);
+                Debug.Log("SLOW");
+                (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = false;
+                rg.velocity = Vector3.right * vSpeed;
+            }
+
             if (transform.position.x > xMax)
             {
                 Destroy(gameObject);
