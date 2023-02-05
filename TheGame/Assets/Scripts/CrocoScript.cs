@@ -6,18 +6,10 @@ using UnityEngine.PlayerLoop;
 public class CrocoScript : MonoBehaviour
 {
     public float hSpeed;
-    float zMin;
-    float zMax;
+    public float zMin;
+    public float zMax;
     public bool isGoingForward = true;
     public Rigidbody rg;
-
-    void Start()
-    {
-        var sea = GameObject.Find("Sea");
-        Vector3 size = sea.GetComponent<Renderer>().bounds.size;
-        zMin = sea.transform.position.z - size.z;
-        zMax = sea.transform.position.z + size.z;
-    }
 
     private void FixedUpdate()
     {
