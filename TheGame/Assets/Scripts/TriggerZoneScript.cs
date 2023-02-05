@@ -5,17 +5,20 @@ using UnityEngine.PlayerLoop;
 
 public class TriggerZoneScript : MonoBehaviour
 {
-    public List<AudioClip> clip = new List<AudioClip>();
-    public AudioSource audioSource ;
+    public List<AudioClip> clipCroco = new List<AudioClip>();
+    public AudioSource audioSource;
 
-    private void OnTriggerEnter(Collider other)
+    void Start()
     {
-        if (other.gameObject.tag == "Player") {
-            if (clip.Count > 0) {
-                int idx = Random.Range(0, clip.Count - 1);
-                audioSource.clip=clip[idx];
-                audioSource.Play();
-            }
+        GetComponent<AudioSource>();
+    }
+
+    public void PlaySound()
+    {
+        if (clipCroco.Count > 0) {
+            int idx = Random.Range(0, clipCroco.Count - 1);
+            audioSource.clip=clipCroco[idx];
+            audioSource.Play();
         }
     }
 }
