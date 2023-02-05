@@ -37,7 +37,7 @@ public class WaveScript : MonoBehaviour
     private void OnTriggerEnter(Collider hit)
     {
         if (hit.gameObject.tag == "Obstacle") {
-            GameObject.Find("SoundEffect").GetComponent<TriggerZoneScript>().PlaySound();
+            GameObject.Find("SoundEffect").GetComponent<TriggerZoneScript>().PlaySoundObstacle();
             Destroy(hit.gameObject);
             life--;
             if (vSpeed > 0)
