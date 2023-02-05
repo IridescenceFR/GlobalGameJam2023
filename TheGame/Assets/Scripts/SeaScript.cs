@@ -39,7 +39,7 @@ public class SeaScript : MonoBehaviour
 
             if (obsList.Count == 0) {
                     var newObs = Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);
-                    newObs.GetComponent<MovingObstacleScript>().isGoingForward = isGoingForward;
+                    newObs.GetComponent<CrocoScript>().isGoingForward = isGoingForward;
                     
                     // Add to our list
                     obsList.Add(newObs);
@@ -57,7 +57,7 @@ public class SeaScript : MonoBehaviour
                     break;
                 } else if (distance >= 12 && obs == obsList.Last()) {
                     var newObs = Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);
-                    newObs.GetComponent<MovingObstacleScript>().isGoingForward = isGoingForward;
+                    newObs.GetComponent<CrocoScript>().isGoingForward = isGoingForward;
                     
                     // Add to our list
                     obsList.Add(newObs);

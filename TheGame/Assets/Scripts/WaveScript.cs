@@ -11,16 +11,20 @@ public class WaveScript : MonoBehaviour
     public float hSpeed;
     public float vSpeed;
     public float vSpeedMax;
-    public int power;
+    public int life = 3;
 
     public Rigidbody rg;
+    public GameManager gm;
 
     private void FixedUpdate()
     {
         float zAxis = Input.GetAxis("Horizontal");
-        if (transform.position.z + zAxis*0.1f < outerLeft || transform.position.z + zAxis*0.1f > outerRight) {
+        if (transform.position.z + zAxis * 0.1f < outerLeft || transform.position.z + zAxis * 0.1f > outerRight)
+        {
             rg.velocity = Vector3.left * vSpeed;
-        } else {
+        }
+        else
+        {
             rg.velocity = new Vector3(-1 * vSpeed, 0, zAxis * hSpeed);
         }
 
@@ -30,13 +34,26 @@ public class WaveScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter (Collider hit)
+    private void OnTriggerEnter(Collider hit)
     {
-        if (hit.gameObject.tag == "Obstacle") {
+        if (hit.gameObject.tag == "Obstacle")
+        {
             Destroy(hit.gameObject);
-            if (vSpeed > 0) {
+            life--;
+            if (vSpeed > 0)
+            {
                 vSpeed -= 5f;
             }
+
+            if (life == 0)
+            {
+                //LOOSE
+            }
+        }
+
+        if (hit.gameObject.tag == "Mangrove")
+        {
+            //WIN
         }
     }
 }
