@@ -1,18 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI inventaire;
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateInventaire(int stuff)
     {
-        
+        inventaire.text = stuff + " / 10";
     }
 }

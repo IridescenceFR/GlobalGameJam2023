@@ -59,8 +59,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 64263397873045970, guid: 45894ac8f819c924cada460357b598cc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45894ac8f819c924cada460357b598cc, type: 3}
 --- !u!1 &604919634751987508 stripped
 GameObject:
@@ -83,6 +82,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!65 &8786615387151383288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604919634751987508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1104455, y: 1.1063067, z: 1.9326818}
+  m_Center: {x: 0, y: 0.54636556, z: -0.04710266}
 --- !u!114 &1865160367979941037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,21 +109,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moving: 0
   vSpeed: 5
+  vSpeedMax: 100
   rg: {fileID: 8795092633675307135}
   xMax: 800
   outerLeft: -8
   outerRight: 8
   offset: {x: 0.5, y: 0, z: 1}
---- !u!65 &8786615387151383288
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604919634751987508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1104455, y: 1.1063067, z: 1.9326818}
-  m_Center: {x: 0, y: 0.54636556, z: -0.04710266}
+  tree: {fileID: 5264110200231832890, guid: bec3da1bc8a548a18b80cf9e3255f9a0, type: 3}
+  sea: {fileID: 9196243705117702704, guid: 03d84bbff0138759e977a0d372f7dbb4, type: 3}

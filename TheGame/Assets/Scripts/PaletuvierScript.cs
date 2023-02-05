@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PaletuvierScript : MonoBehaviour
@@ -12,6 +14,12 @@ public class PaletuvierScript : MonoBehaviour
     private float cooldown;
     public Camera cam;
     public BeachScript beach;
+    public UIScript ui;
+
+    void Start()
+    {
+        ui.UpdateInventaire(obstacleList.Count);
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,6 +39,7 @@ public class PaletuvierScript : MonoBehaviour
                     beach.numberSpawned -= 1;
                     obs.transform.position += (Vector3.down+ Vector3.left) * 10;
                     obstacleList.Add(obs);
+                    ui.UpdateInventaire(obstacleList.Count);
                 }
                 else if (hit.collider.gameObject.tag == "SpawnZone")
                 {
@@ -40,6 +49,7 @@ public class PaletuvierScript : MonoBehaviour
                         obstacleList[0].transform.position = spawnCoord;
                         obstacleList[0].GetComponent<ObstacleScript>().SetMovingTrue();
                         obstacleList.RemoveAt(0);
+                        ui.UpdateInventaire(obstacleList.Count);
                         cooldown = throwCoolDown;
                     }
                 }
