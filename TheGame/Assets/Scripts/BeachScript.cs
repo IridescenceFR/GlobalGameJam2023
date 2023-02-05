@@ -9,7 +9,8 @@ public class BeachScript : MonoBehaviour
 {
     public float spawnSpeed;
     private float cooldown;
-    public GameObject objectToSpawn;
+    public List<GameObject> objectToSpawn = new List<GameObject>();
+
     Vector3 size;
     Vector3 min;
     Vector3 max;
@@ -35,7 +36,8 @@ public class BeachScript : MonoBehaviour
                     transform.position.y + 2,
                     Random.Range(min.z, max.z)
                 );
-                Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);
+                int index = Random.Range(0, objectToSpawn.Count-1);
+                Instantiate(objectToSpawn[index], randomSpawnPos, Quaternion.identity);
                 numberSpawned += 1;
                 cooldown = spawnSpeed;
             }

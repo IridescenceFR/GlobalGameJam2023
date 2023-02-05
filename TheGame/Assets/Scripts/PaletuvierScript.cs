@@ -28,7 +28,6 @@ public class PaletuvierScript : MonoBehaviour
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            float distToGround = -1f;
 
             if (Physics.Raycast(ray, out hit))
             {

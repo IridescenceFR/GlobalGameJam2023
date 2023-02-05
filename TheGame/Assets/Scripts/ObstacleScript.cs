@@ -16,6 +16,7 @@ public class ObstacleScript : MonoBehaviour
     public Vector3 offset;
     public GameObject tree;
     public GameObject sea;
+    public Collider cl;
 
     private void FixedUpdate()
     {
@@ -25,16 +26,16 @@ public class ObstacleScript : MonoBehaviour
             float distanceWave = Mathf.Sqrt(Mathf.Pow((wave.transform.position.x - transform.position.x), 2));
             float distanceTree = Mathf.Sqrt(Mathf.Pow((tree.transform.position.x - transform.position.x), 2));
 
-            if (distanceWave > 70 && distanceTree > 15) {
+            if (distanceWave > 70 && distanceTree > 20) {
                 Debug.Log(distanceWave);
                 Debug.Log("FAST");
-                (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
+                cl.isTrigger = true;
                 rg.velocity = Vector3.right * vSpeedMax;
             } else {
                 Debug.Log(distanceWave);
                 Debug.Log(distanceTree);
                 Debug.Log("SLOW");
-                (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = false;
+                cl.isTrigger = false;
                 rg.velocity = Vector3.right * vSpeed;
             }
 
@@ -57,5 +58,6 @@ public class ObstacleScript : MonoBehaviour
     public void SetMovingTrue()
     {
         moving = true;
+        cl.isTrigger = false;
     }
 }
