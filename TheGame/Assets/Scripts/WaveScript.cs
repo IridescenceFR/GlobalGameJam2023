@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -15,6 +17,12 @@ public class WaveScript : MonoBehaviour
 
     public Rigidbody rg;
     public GameManager gm;
+    public UIScript ui;
+
+    void Start()
+    {
+        ui.UpdateLife(life);
+    }
 
     private void FixedUpdate()
     {
@@ -40,20 +48,21 @@ public class WaveScript : MonoBehaviour
             GameObject.Find("SoundEffect").GetComponent<TriggerZoneScript>().PlaySound();
             Destroy(hit.gameObject);
             life--;
+            ui.UpdateLife(life);
             if (vSpeed > 0)
             {
                 vSpeed -= 5f;
             }
 
-            if (life == 0)
+            if (life < 1)
             {
-                //LOOSE
+                gm.OnMangroveWin();
             }
         }
 
-        if (hit.gameObject.tag == "Mangrove")
+        if (hit.gameObject.tag == "SpawnZone")
         {
-            //WIN
+            gm.OnWaveWin();
         }
     }
 }

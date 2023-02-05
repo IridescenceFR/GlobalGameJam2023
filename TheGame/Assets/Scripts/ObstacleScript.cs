@@ -27,14 +27,9 @@ public class ObstacleScript : MonoBehaviour
             float distanceTree = Mathf.Sqrt(Mathf.Pow((tree.transform.position.x - transform.position.x), 2));
 
             if (distanceWave > 70 && distanceTree > 20) {
-                Debug.Log(distanceWave);
-                Debug.Log("FAST");
                 cl.isTrigger = true;
                 rg.velocity = Vector3.right * vSpeedMax;
             } else {
-                Debug.Log(distanceWave);
-                Debug.Log(distanceTree);
-                Debug.Log("SLOW");
                 cl.isTrigger = false;
                 rg.velocity = Vector3.right * vSpeed;
             }

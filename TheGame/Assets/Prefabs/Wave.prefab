@@ -4902,7 +4902,8 @@ MonoBehaviour:
   vSpeedMax: 10
   life: 3
   rg: {fileID: 876380833462050494}
-  gm: {fileID: 0}
+  gm: {fileID: 5604160993252771094, guid: d14a6fa78a7da8067a2bb57204622717, type: 3}
+  ui: {fileID: 0}
 --- !u!212 &3239502851831443232
 SpriteRenderer:
   m_ObjectHideFlags: 0
