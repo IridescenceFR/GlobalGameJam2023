@@ -16,7 +16,7 @@ public class TriggerZoneScript : MonoBehaviour
     public void PlaySound()
     {
         if (clipCroco.Count > 0) {
-            int idx = Random.Range(0, clipCroco.Count - 1);
+            int idx = Random.Range(0, clipCroco.Count);
             audioSource.clip=clipCroco[idx];
             audioSource.Play();
         }
