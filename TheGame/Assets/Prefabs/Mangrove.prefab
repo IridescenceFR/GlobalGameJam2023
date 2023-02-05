@@ -312,3 +312,4 @@ MonoBehaviour:
   throwCoolDown: 0.3
   cam: {fileID: 5264110199602668675}
   beach: {fileID: 0}
+  ui: {fileID: 0}

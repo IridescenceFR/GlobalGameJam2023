@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSpeed: 1
-  objectToSpawn: {fileID: 3292092124148656761, guid: 0fe4b591b1f40de558616c2e0cb6dc07, type: 3}
+  objectToSpawn:
+  - {fileID: 6839295999110037149, guid: ff70d4106cea14615ad3985c595eaaad, type: 3}
+  - {fileID: 6240862872528002698, guid: 7f98601aa00dd495184d9df718345ebc, type: 3}
+  - {fileID: 1229846009174499541, guid: 06d139592d562443391ec7ac50965ea0, type: 3}
   maxSpawned: 6
   numberSpawned: 0
