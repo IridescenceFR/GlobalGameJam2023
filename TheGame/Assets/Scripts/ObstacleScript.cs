@@ -14,7 +14,6 @@ public class ObstacleScript : MonoBehaviour
     public float outerLeft;
     public float outerRight;
     public Vector3 offset;
-    public GameObject wave;
     public GameObject tree;
     public GameObject sea;
 
@@ -22,12 +21,12 @@ public class ObstacleScript : MonoBehaviour
     {
         if (moving)
         {
+            var wave = GameObject.Find("Wave");
             float distanceWave = Mathf.Sqrt(Mathf.Pow((wave.transform.position.x - transform.position.x), 2));
             float distanceTree = Mathf.Sqrt(Mathf.Pow((tree.transform.position.x - transform.position.x), 2));
-                Debug.Log(wave.transform.position.x );
 
             if (distanceWave > 20 && distanceTree > 10) {
-                // Debug.Log(distanceWave);
+                Debug.Log(distanceWave);
                 Debug.Log("FAST");
                 rg.velocity = Vector3.right * vSpeedMax;
             } else {
