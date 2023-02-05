@@ -36,7 +36,7 @@ public class BeachScript : MonoBehaviour
                     transform.position.y + 2,
                     Random.Range(min.z, max.z)
                 );
-                int index = Random.Range(0, objectToSpawn.Count - 1);
+                int index = Random.Range(0, objectToSpawn.Count);
                 Instantiate(objectToSpawn[index], randomSpawnPos, Quaternion.identity);
                 numberSpawned += 1;
                 cooldown = spawnSpeed;
