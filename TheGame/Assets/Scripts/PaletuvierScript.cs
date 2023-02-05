@@ -44,7 +44,7 @@ public class PaletuvierScript : MonoBehaviour
                 {
                     if (cooldown < 0 && obstacleList.Count > 0)
                     {
-                        Vector3 spawnCoord = new Vector3(hit.point.x,0,hit.point.z);
+                        Vector3 spawnCoord = new Vector3(hit.point.x,-0.5f,hit.point.z);
                         obstacleList[0].transform.position = spawnCoord;
                         obstacleList[0].GetComponent<ObstacleScript>().SetMovingTrue();
                         obstacleList.RemoveAt(0);
