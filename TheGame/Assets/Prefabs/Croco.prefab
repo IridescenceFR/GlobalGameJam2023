@@ -128,5 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hSpeed: 4
+  zMin: -8
+  zMax: 8
   isGoingForward: 1
   rg: {fileID: 4063527102589135293}
