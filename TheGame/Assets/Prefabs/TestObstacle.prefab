@@ -129,12 +129,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moving: 0
   vSpeed: 5
-  vSpeedMax: 0
+  vSpeedMax: 100
   rg: {fileID: 3292092124148656759}
   xMax: 800
   outerLeft: -8
   outerRight: 8
   offset: {x: 0.5, y: 0, z: 0.5}
-  wave: {fileID: 9196243705117702704, guid: 03d84bbff0138759e977a0d372f7dbb4, type: 3}
   tree: {fileID: 5264110200231832890, guid: bec3da1bc8a548a18b80cf9e3255f9a0, type: 3}
   sea: {fileID: 951608776048755100, guid: cf1ad254029818644a1d8e8169d4baeb, type: 3}

@@ -25,13 +25,16 @@ public class ObstacleScript : MonoBehaviour
             float distanceWave = Mathf.Sqrt(Mathf.Pow((wave.transform.position.x - transform.position.x), 2));
             float distanceTree = Mathf.Sqrt(Mathf.Pow((tree.transform.position.x - transform.position.x), 2));
 
-            if (distanceWave > 20 && distanceTree > 10) {
+            if (distanceWave > 70 && distanceTree > 15) {
                 Debug.Log(distanceWave);
                 Debug.Log("FAST");
+                (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
                 rg.velocity = Vector3.right * vSpeedMax;
             } else {
-                // Debug.Log(distanceWave);
+                Debug.Log(distanceWave);
+                Debug.Log(distanceTree);
                 Debug.Log("SLOW");
+                (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = false;
                 rg.velocity = Vector3.right * vSpeed;
             }
 
