@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571343, b: 0.30692208, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -74540,6 +74540,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 08249453ebe3946bfb5c43c2a922bbad, type: 3}
   - {fileID: 8300000, guid: c934f5509aa51401fbf95aaf7a23f264, type: 3}
   - {fileID: 8300000, guid: 9c15849f43ecf4d06af25e6a70549ce2, type: 3}
+  clipSplash:
+  - {fileID: 8300000, guid: 9ef24a66ac5a64534b35f1e3b0647ef6, type: 3}
+  - {fileID: 8300000, guid: 75f4f3175fa634d5bbb3016dcf28adf8, type: 3}
+  - {fileID: 8300000, guid: b74d9d27d419f47b18121def449ff579, type: 3}
+  - {fileID: 8300000, guid: 1fe4c79c9dde047f29f31931a602ec63, type: 3}
+  - {fileID: 8300000, guid: 83cb8992df9a6497786eb1097c04011f, type: 3}
   audioSource: {fileID: 2139634192}
 --- !u!82 &2139634192
 AudioSource:
