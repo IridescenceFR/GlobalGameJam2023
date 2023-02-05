@@ -74418,5 +74418,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8484906377969867560, guid: 0b1c22da83c0f9e8cba48eab9b8b0c52, type: 3}
+      propertyPath: objectToSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 3292092124148656761, guid: 0fe4b591b1f40de558616c2e0cb6dc07, type: 3}
+    - target: {fileID: 8484906377969867560, guid: 0b1c22da83c0f9e8cba48eab9b8b0c52, type: 3}
+      propertyPath: objectToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 3292092124148656761, guid: 0fe4b591b1f40de558616c2e0cb6dc07, type: 3}
+    - target: {fileID: 8484906377969867560, guid: 0b1c22da83c0f9e8cba48eab9b8b0c52, type: 3}
+      propertyPath: objectToSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 3292092124148656761, guid: 0fe4b591b1f40de558616c2e0cb6dc07, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1c22da83c0f9e8cba48eab9b8b0c52, type: 3}

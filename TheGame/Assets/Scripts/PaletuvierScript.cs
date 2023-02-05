@@ -39,6 +39,7 @@ public class PaletuvierScript : MonoBehaviour
                         Vector3 spawnCoord = new Vector3(hit.point.x,0,hit.point.z);
                         obstacleList[0].transform.position = spawnCoord;
                         obstacleList[0].GetComponent<ObstacleScript>().SetMovingTrue();
+                        (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = false;
                         obstacleList.RemoveAt(0);
                         cooldown = throwCoolDown;
                     }

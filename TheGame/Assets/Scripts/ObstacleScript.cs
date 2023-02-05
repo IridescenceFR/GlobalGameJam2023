@@ -25,7 +25,7 @@ public class ObstacleScript : MonoBehaviour
             float distanceWave = Mathf.Sqrt(Mathf.Pow((wave.transform.position.x - transform.position.x), 2));
             float distanceTree = Mathf.Sqrt(Mathf.Pow((tree.transform.position.x - transform.position.x), 2));
 
-            if (distanceWave > 70 && distanceTree > 15) {
+            if (distanceWave > 70 && distanceTree > 20) {
                 Debug.Log(distanceWave);
                 Debug.Log("FAST");
                 (gameObject.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
