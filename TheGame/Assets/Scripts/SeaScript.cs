@@ -11,6 +11,8 @@ public class SeaScript : MonoBehaviour
     public int spawnAmountMiddle = 5;
     public int spawnAmountEnd = 8;
     Vector3 size;
+    public int outerLeft;
+    public int outerRight;
 
 
     void Start()
@@ -34,7 +36,7 @@ public class SeaScript : MonoBehaviour
             Vector3 randomSpawnPos = new Vector3(
                 Random.Range(minRange, maxRange),
                 0,
-                (isGoingForward? transform.position.z - size.z : transform.position.z + size.z)
+                (isGoingForward? outerLeft : outerRight)
             );
 
             if (obsList.Count == 0) {
