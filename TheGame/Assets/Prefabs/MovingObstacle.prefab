@@ -115,6 +115,8 @@ MonoBehaviour:
   rg: {fileID: 621517555029092679}
   hSpeed: 4
   isGoingForward: 1
+  outerLeft: -9
+  outerRight: 9
 --- !u!54 &621517555029092679
 Rigidbody:
   m_ObjectHideFlags: 0

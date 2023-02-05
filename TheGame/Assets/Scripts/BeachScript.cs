@@ -27,7 +27,7 @@ public class BeachScript : MonoBehaviour
             if (numberSpawned < maxSpawned) {
                 Vector3 randomSpawnPos = new Vector3(
                     Random.Range(min.x, max.x),
-                    0,
+                    transform.position.y + 2,
                     Random.Range(min.z, max.z)
                 );
                 Instantiate(objectToSpawn, randomSpawnPos, Quaternion.identity);

@@ -32,7 +32,7 @@ public class WaveScript : MonoBehaviour
 
     private void OnTriggerEnter (Collider hit)
     {
-        if (hit.gameObject.tag == "Obstacle") {
+        if (hit.gameObject.tag.Contains("Obstacle")) {
             Destroy(hit.gameObject);
             if (vSpeed > 0) {
                 vSpeed -= 5f;
