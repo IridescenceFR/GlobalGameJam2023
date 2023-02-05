@@ -138,3 +138,6 @@ MonoBehaviour:
   tree: {fileID: 5264110200231832890, guid: bec3da1bc8a548a18b80cf9e3255f9a0, type: 3}
   sea: {fileID: 951608776048755100, guid: cf1ad254029818644a1d8e8169d4baeb, type: 3}
   cl: {fileID: 3292092124148656756}
+  clip:
+  - {fileID: 8300000, guid: e6a0164dff2924451891eff3b7d2bb32, type: 3}
+  audioSource: {fileID: 0}
