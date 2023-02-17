@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c74f177bfe740675ca4655f5968a6307, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5903ed464bf76604dab226b4a0ad4f3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6240862872528002692}
   - component: {fileID: 6240862872528002693}
   m_Layer: 0
-  m_Name: branche 2
+  m_Name: bouteille
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,8 +131,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7577617, y: 1, z: 1.2085128}
-  m_Center: {x: 0.12111916, y: 0, z: 0.012941122}
+  m_Size: {x: 0.60442865, y: 1, z: 1.0745744}
+  m_Center: {x: -0.08882058, y: 0, z: 0.020070016}
 --- !u!54 &6240862872528002692
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c74f177bfe740675ca4655f5968a6307, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5903ed464bf76604dab226b4a0ad4f3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -10,13 +10,13 @@ public class ObstacleScript : MonoBehaviour
     public float vSpeed;
     public float vSpeedMax;
     public Rigidbody rg;
-    public float xMax;
     public float outerLeft;
     public float outerRight;
     public Vector3 offset;
     public GameObject tree;
     public GameObject sea;
     public Collider cl;
+    public bool isABoat = false;
 
     private void FixedUpdate()
     {
@@ -34,18 +34,29 @@ public class ObstacleScript : MonoBehaviour
                 rg.velocity = Vector3.right * vSpeed;
             }
 
-            if (transform.position.x > xMax)
+            if (transform.position.x > wave.transform.position.x + 5)
             {
                 Destroy(gameObject);
             }
 
             if (transform.position.z - offset.z < outerLeft)
             {
-                transform.position += offset + Vector3.right;
+                transform.position += offset;
             }
             else if (transform.position.z + offset.z > outerRight)
             {
-                transform.position -= offset + Vector3.right;
+                transform.position -= offset;
+            }
+        }
+        else if(isABoat == true)
+        {
+            if(transform.position.z < 15)
+            {
+                rg.velocity = Vector3.forward * vSpeed;
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
     }

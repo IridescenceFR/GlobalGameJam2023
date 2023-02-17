@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public UIScript ui;
     private bool startEnd = false;
-    private float cooldown = 3;
+    public float cooldown = 5;
 
     public void OnWaveWin()
     {

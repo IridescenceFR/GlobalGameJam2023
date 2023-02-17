@@ -10,19 +10,25 @@ public class CrocoScript : MonoBehaviour
     public float zMax;
     public bool isGoingForward = true;
     public Rigidbody rg;
+    public SpriteRenderer sr;
+
+    private void Start()
+    {
+        hSpeed = Random.Range(3,7);
+    }
 
     private void FixedUpdate()
     {
         if (isGoingForward) {
             rg.velocity = Vector3.forward * hSpeed;
+            sr.flipX = false;
             if (transform.position.z > zMax) {
-                transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
                 isGoingForward = !isGoingForward;
             }
         } else {
             rg.velocity = Vector3.back * hSpeed;
+            sr.flipX = true;
             if (transform.position.z < zMin) {
-                transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
                 isGoingForward = !isGoingForward;
             }
         }

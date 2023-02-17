@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7355964352804529730}
   - component: {fileID: 2157560395685927986}
-  - component: {fileID: 2371566038076842479}
   m_Layer: 7
   m_Name: fortree
   m_TagString: Untagged
@@ -25,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6711734380947726186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6839295999110037143}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!212 &2157560395685927986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2371566038076842479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6711734380947726186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e800f6eb34eb8466da3979ee66a8a0f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotation: {x: 40, y: 90, z: 40}
 --- !u!1 &6839295999110037149
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,8 +131,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.319274, y: 1, z: 0.9177533}
+  m_Center: {x: 0.05341062, y: 0, z: 0.0077070296}
 --- !u!54 &6839295999110037139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -196,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5444255891264129593}
   - component: {fileID: 8718359967414970045}
-  - component: {fileID: 2470145394378615972}
   m_Layer: 6
   m_Name: forwave
   m_TagString: Untagged
@@ -211,14 +196,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9005745977926466409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6839295999110037143}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!212 &8718359967414970045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -271,16 +256,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2470145394378615972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005745977926466409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e800f6eb34eb8466da3979ee66a8a0f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotation: {x: 0, y: 90, z: 40}
