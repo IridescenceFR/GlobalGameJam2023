@@ -44484,7 +44484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatPrefab: {fileID: 1365675823704066543, guid: 2ebe47516b082824992f89f9bfbab1e0, type: 3}
-  spawnRate: 0.004
+  spawnRate: 0.002
 --- !u!4 &1240828573
 Transform:
   m_ObjectHideFlags: 0
